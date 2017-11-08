@@ -1,0 +1,48 @@
+﻿<html>
+  <head>
+		
+    <script>
+
+   function concatenar() {
+        
+
+        var camponombre = document.getElementById("campo-nombre").value;
+		var campoPapellido = document.getElementById("campo-papellido").value;
+		var campoSapellido = document.getElementById("campo-sapellido").value;
+		
+        var nombreCompleto = camponombre + " " + campoPapellido + " " + campoSapellido;
+
+        document.getElementById("label-resultado").innerHTML = nombreCompleto;
+      }
+    </script>
+
+  </head>
+  <body style ="background-color:green;">
+
+    <h1>Personas</h1>
+
+    <!-- Sección captura -->
+    <div>
+      <h2>Captura</h2>
+      <p>
+        <label>Nombre: </label> <input type="text" id="campo-nombre" />
+      </p>
+	        <p>
+        <label>Primer apellido: </label> <input type="text" id="campo-papellido" />
+      </p>
+	        <p>
+        <label>Segundo apellido: </label> <input type="text" id="campo-sapellido" />
+      </p>
+      <p>
+        <input type="submit" value="Enviar" onclick="concatenar()" />
+      </p>
+    </div>
+
+    <div>
+      <h2>Resultados</h2>
+      <p>
+        Nombre Completo:  <label id="label-resultado"></label>
+      </p>
+    </div>
+  </body>
+</html>
